@@ -2,3 +2,55 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
 }
+
+nav {
+    margin: 20px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav .logo {
+    display: block;
+    float: left;
+}
+
+nav .logo a {
+    text-decoration: none;
+    color: #000000;
+    letter-spacing: 5px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+nav .logo a:hover {
+    background-color: #ccc;
+}
+
+nav .logo a span {
+    font-weight: 800;
+}
+
+nav .menu {
+    float: right;
+}
+
+nav .menu ul {
+    display: inline;
+}
+
+nav .menu ul li {
+    display: inline;
+    padding-left: 20px;
+}
+
+nav .menu ul li a {
+    text-decoration: none;
+    color: #000000;
+    letter-spacing: 5px;
+    padding: 10px;
+}
+
+nav .menu ul li a:hover {
+    background-color: #ccc;
+}
