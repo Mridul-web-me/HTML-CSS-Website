@@ -331,6 +331,10 @@ Mobile Devices
         display: none;
     }
 
+    .menu {
+        padding: 100px 0;
+    }
+
     .project-items,
     .about-us {
         grid-template-columns: repeat(1, 1fr);
