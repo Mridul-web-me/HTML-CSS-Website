@@ -30,6 +30,7 @@ header nav {
     width: 100%;
     background: #ffffff;
     z-index: 1;
+
 }
 
 
@@ -45,9 +46,14 @@ header nav .logo a:hover {
     background-color: #cccccc;
 }
 
+header nav .menu {
+    margin-right: 20px;
+}
+
 header nav .menu ul li {
     list-style: none;
     display: inline;
+
 }
 
 header nav .menu ul li a {
@@ -139,7 +145,7 @@ header .banner h3 .arch1 {
 }
 
 /* ------------
-About
+    About
 ------------- */
 
 #about {
@@ -197,9 +203,9 @@ About
 }
 
 
-/* ---------
-contact
-----------*/
+/* ------------
+    Contact
+---------------*/
 #contact {
     padding-top: 40px;
     transition: 0.5s;
@@ -243,7 +249,7 @@ contact
 
 
 /* ---------------
-FOOTER  
+    FOOTER  
 ------------------- */
 footer {
     background: #000000;
@@ -263,8 +269,11 @@ footer a:hover {
     color: green;
 }
 
+/* -------------
+    Tablet Mode 
+---------------*/
+
 @media (max-width:991px) {
-    header nav {}
 
     .menu {
         position: fixed;
