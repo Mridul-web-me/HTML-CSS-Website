@@ -9,16 +9,17 @@
 </head>
 <body>
     
-<header>
+<header id="home">
     <nav>
         <div class="logo">
-            <a href=""><Span>BR</Span> Artchitect</a>
+            <a href="#home"><Span>BR</Span> Artchitect</a>
         </div>
+        <div class="toggle" onclick="toggleMenu();"></div>
         <div class="menu">
             <ul>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#project" onclick="toggleMenu();">Project</a></li>
+                <li><a href="#about" onclick="toggleMenu();">About</a></li>
+                <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -34,40 +35,36 @@
     <h1 class="project-title">Project</h1>
 <div class="project-items">
     <div class="project-item">
-       <div class="project-text">
-        <h3>Revovated</h3>
-       </div>
-        <div class="project-img">
             <img src="img/house2.jpg" alt="">
-        </div>
-    </div>
-    <div class="project-img">
-        <h3>Revovated</h3>
+            <div class="top-left">Summer House</div>
+     </div>
+    <div class="project-item">
         <img src="img/house3.jpg" alt="">
+        <div class="top-left">Brick House</div>
     </div>
-    <div class="project-img">
-        <h3>Revovated</h3>
+    <div class="project-item">
         <img src="img/house4.jpg" alt="">
+        <div class="top-left">Renovated</div>
     </div>
-    <div class="project-img">
-        <h3>Revovated</h3>
+    <div class="project-item">
         <img src="img/house5.jpg" alt="">
+        <div class="top-left">Barn House</div>
     </div>
-    <div class="project-img">
-        <h3>Revovated</h3>
+    <div class="project-item">
         <img src="img/house2.jpg" alt="">
+        <div class="top-left">Summer House</div>
     </div>
-    <div class="project-img">
-        <h3>Revovated</h3>
+    <div class="project-item">
         <img src="img/house3.jpg" alt="">
+        <div class="top-left">Brick House</div>
     </div>
-    <div class="project-img">
-        <h3>Revovated</h3>
+    <div class="project-item">
         <img src="img/house4.jpg" alt="">
+        <div class="top-left">Renovated</div>
     </div>
-    <div class="project-img">
-        <h3>Revovated</h3>
+    <div class="project-item">
         <img src="img/house5.jpg" alt="">
+        <div class="top-left">Barn House</div>
     </div>
 </div>
 </section>
@@ -128,5 +125,14 @@
 <footer>
     <p>Powerd By <a href="https://www.w3schools.com/w3css/tryw3css_templates_architect.htm#contact">w3.css</a></p>
 </footer>
+
+<script type="text/javascript">
+    function toggleMenu() {
+        var menuToggle = document.querySelector('.toggle');
+        var menu = document.querySelector('.menu');
+        menuToggle.classList.toggle('active');
+        menu.classList.toggle('active');
+    };
+</script>
 </body>
 </html>

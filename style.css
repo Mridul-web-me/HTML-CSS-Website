@@ -1,6 +1,12 @@
+* {
+    scroll-behavior: smooth;
+    transition: 0.5s;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
+
 }
 
 /* ---------------
@@ -11,6 +17,7 @@ header {
     background-color: #fff;
     position: relative;
     text-align: center;
+    transition: 0.5s;
 }
 
 header nav {
@@ -49,6 +56,8 @@ header nav .menu ul li a {
     letter-spacing: 4px;
     font-size: 15px;
     padding: 8px 16px;
+    transition: 0.3s;
+    scroll-behavior: smooth;
 }
 
 header nav .menu ul li a:hover {
@@ -88,30 +97,40 @@ header .banner h3 .arch1 {
 /* -------------
     Project
 ---------------- */
+.project {
+    transition: 0.5s;
+}
+
 .project-title {
     padding: 40px 20px;
     font-weight: 400;
 }
 
 .project-items {
-    position: ;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     margin: 20px;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
-.project-items .project-img img {
+.project-items .project-item img {
     width: 100%;
 }
 
-.project-items .project-img h3 {
-    display: flex;
-    justify-content: end;
+.project-items .project-item .top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    padding: 10px;
 }
 
-.project-items .project-img {
+
+.project-items .project-item {
     position: relative;
     top: 0;
     left: 0;
@@ -123,10 +142,19 @@ About
 
 .about {
     padding: 40px 20px;
+    transition: 0.5s;
 }
 
 .about-text {
     margin: 40px 0;
+}
+
+.about-title {
+    font-weight: 400;
+}
+
+.about-text p {
+    font-size: 15px;
 }
 
 .about-us {
@@ -157,6 +185,7 @@ About
     display: block;
     width: 100%;
     padding: 10px 0;
+    text-align: center;
 }
 
 .about-us .about-person a:hover {
@@ -167,6 +196,10 @@ About
 /* ---------
 contact
 ----------*/
+#contact {
+    transition: 0.5s;
+}
+
 .contact h2 {
     margin: 20px;
 }
@@ -223,4 +256,82 @@ footer a {
 
 footer a:hover {
     color: green;
+}
+
+@media (max-width:991px) {
+    header nav {}
+
+    .menu {
+        position: fixed;
+        top: 55px;
+        left: -190%;
+        display: block;
+        text-align: center;
+        padding: 100px 50px;
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+        transition: 0.5s;
+        background: rgba(52, 73, 94);
+    }
+
+    .menu ul li {
+        display: block;
+    }
+
+    .menu ul li a {
+        color: #fff;
+        font-size: 24px;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .toggle {
+        width: 40px;
+        height: 40px;
+        background: url(./nav/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+
+    .toggle.active {
+        background: url(./nav/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+
+    header .banner img {
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .project-items,
+    .about-us {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+/* ---------
+Mobile Devices
+------------*/
+
+@media (max-width:688px) {
+    header .banner h3 .arch2 {
+        display: none;
+    }
+
+    .project-items,
+    .about-us {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
 }
